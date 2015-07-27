@@ -9,12 +9,12 @@
 
 
 <!--
-Element providing solution to no problem in particular. As a simple, increments a counter when clicked.
+Element providing means to open and close overlay modal with methods to capture action when modal is submitted.
 
 ##### Usage
 
     <px-modal>
-      <button class=btn>Open Modal</button>
+      <button class=btn>Button Text</button>
     </px-modal>
 
 @element px-modal
@@ -44,9 +44,55 @@ Element providing solution to no problem in particular. As a simple, increments 
 
     properties: {
 
+      /**
+       * Text for open close modal button
+       *
+       * @type {String}
+       */
+      
+      btnModalToggle: {
+        type: String
+      },
+      
+      /**
+       * Modal id string
+       *
+       * @type {String}
+       */
+      
       modalId: {
         type: String
       },
+      
+      /**
+       * Text for header of modal
+       *
+       * @type {String}
+       */
+      
+      modalHeading: {
+        type: String
+      },
+      
+      /**
+       * Text for button with positive action on modal
+       *
+       * @type {String}
+       */
+      
+      btnModalPositive: {
+        type: String
+      },
+      
+      /**
+       * Text for button with negative action on modal
+       *
+       * @type {String}
+       */
+      
+      btnModalNegative: {
+        type: String
+      }
 
     },
 
