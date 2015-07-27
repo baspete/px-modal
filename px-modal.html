@@ -25,13 +25,13 @@ Element providing solution to no problem in particular. As a simple, increments 
 <dom-module id="px-modal">
   <link rel="import" type="css" href="css/px-modal.css"/>
   <template>
-    <button class="modal-toggle btn btn--primary" name="{{modalId}}">{{btnModalToggle}}</button>
+    <button on-click="modalButtonClicked" class="modal-toggle btn btn--primary" name="{{modalId}}">{{btnModalToggle}}</button>
     <div class="modal flex flex--middle flex--center full-height u-1/1" id="{{modalId}}" role="dialog" aria-labelledby$="{{modalIdTitle(modalId)}}">
       <section class="modal__content u-p+" role=region>
         <h3 id="{{modalIdTitle(modalId)}}">{{modalHeading}}</h3>
         <content></content>
-        <button class="modal-toggle btn btn--primary" name="{{modalId}}">{{btnModalPositive}}</button>
-        <button class="modal-toggle btn" name="{{modalId}}">{{btnModalNegative}}</button>
+        <button on-click="modalActionButtonClicked" class="modal-toggle btn btn--primary" name="{{modalId}}">{{btnModalPositive}}</button>
+        <button on-click="modalActionButtonClicked" class="modal-toggle btn" name="{{modalId}}">{{btnModalNegative}}</button>
       </section>
     </div>
   </template>
@@ -41,42 +41,27 @@ Element providing solution to no problem in particular. As a simple, increments 
   Polymer({
 
     is: 'px-modal',
-    
+
     properties: {
-      
+
       modalId: {
         type: String
       },
-    
+
     },
-    
+
     modalIdTitle: function(modalTitle) {
       return modalTitle + '-title';
     },
-    
-    ready: function() {
 
-      function toggle(toggleData) {
-        el = document.getElementById(toggleData);
-        el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-      }
-      
-      // Select all toggle buttons
-      var toggles = document.querySelectorAll(".modal-toggle");
-      
-      // For each toggle button
-      [].forEach.call(toggles, function(el) {
-      
-        // Add event listener, trigger toggle function
-        el.addEventListener("click", function(event) {
-          act = this.getAttribute("name");
-          event.preventDefault();
-          toggle(act);
-        }, false);
-      
-      });
-    
+    modalActionButtonClicked: function(evt){
+        this.fire('modalButtonClicked');
+        this.modalButtonClicked(evt);
+    },
+
+    modalButtonClicked: function(evt){
+      var modalEle = Polymer.dom(this.root).querySelector("#" + this.modalId)
+      modalEle.style.visibility = (modalEle.style.visibility == "visible") ? "hidden" : "visible";
     }
-
   });
 </script>
