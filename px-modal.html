@@ -1,0 +1,82 @@
+
+<!--
+    Relative paths assume component is being run from inside an app or another component, where dependencies are flat
+    siblings. When this component is run from its own repo (e.g. ui tests, examples), we assume the server is started with
+    'grunt depserve' (or similar server setup) to enable correct finding of bower dependencies for local runs
+    See https://github.sw.ge.com/jreichenberg/grunt-dep-serve#why-do-we-need-this
+-->
+<link rel="import" href="../polymer/polymer.html"/>
+
+
+<!--
+Element providing solution to no problem in particular. As a simple, increments a counter when clicked.
+
+##### Usage
+
+    <px-modal>
+      <button class=btn>Open Modal</button>
+    </px-modal>
+
+@element px-modal
+@blurb Px Modal open, closing
+@homepage index.html
+@demo demo.html
+-->
+<dom-module id="px-modal">
+  <link rel="import" type="css" href="css/px-modal.css"/>
+  <template>
+    <button class="modal-toggle btn btn--primary" name="{{modalId}}">{{btnModalToggle}}</button>
+    <div class="modal flex flex--middle flex--center full-height u-1/1" id="{{modalId}}" role="dialog" aria-labelledby$="{{modalIdTitle(modalId)}}">
+      <section class="modal__content u-p+" role=region>
+        <h3 id="{{modalIdTitle(modalId)}}">{{modalHeading}}</h3>
+        <content></content>
+        <button class="modal-toggle btn btn--primary" name="{{modalId}}">{{btnModalPositive}}</button>
+        <button class="modal-toggle btn" name="{{modalId}}">{{btnModalNegative}}</button>
+      </section>
+    </div>
+  </template>
+</dom-module>
+
+<script>
+  Polymer({
+
+    is: 'px-modal',
+    
+    properties: {
+      
+      modalId: {
+        type: String
+      },
+    
+    },
+    
+    modalIdTitle: function(modalTitle) {
+      return modalTitle + '-title';
+    },
+    
+    ready: function() {
+
+      function toggle(toggleData) {
+        el = document.getElementById(toggleData);
+        el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+      }
+      
+      // Select all toggle buttons
+      var toggles = document.querySelectorAll(".modal-toggle");
+      
+      // For each toggle button
+      [].forEach.call(toggles, function(el) {
+      
+        // Add event listener, trigger toggle function
+        el.addEventListener("click", function(event) {
+          act = this.getAttribute("name");
+          event.preventDefault();
+          toggle(act);
+        }, false);
+      
+      });
+    
+    }
+
+  });
+</script>
