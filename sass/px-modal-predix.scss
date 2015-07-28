@@ -31,3 +31,7 @@ common/abstract rules go in px-modal-sketch.scss, not in this file.
 .modal__content {
   background-color: $white;
 }
+
+.modal__buttons {
+  border-top: 1px solid $gray4;
+}

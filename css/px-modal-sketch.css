@@ -724,6 +724,30 @@ sup {
 sub {
   bottom: -0.25em; }
 
+.alpha {
+  font-size: 5rem;
+  line-height: 1.0666666667; }
+
+.beta {
+  font-size: 4rem;
+  line-height: 1; }
+
+.gamma {
+  font-size: 3rem;
+  line-height: 1.3333333333; }
+
+.delta {
+  font-size: 2rem;
+  line-height: 1.3333333333; }
+
+.epsilon {
+  font-size: 1.3333333333rem;
+  line-height: 1; }
+
+.zeta {
+  font-size: 0.8rem;
+  line-height: 1.6666666667; }
+
 .btn {
   display: inline-block;
   overflow: visible;
@@ -797,7 +821,14 @@ button.btn {
   z-index: 999; }
 
 .modal__content {
-  max-width: 33.3333333333rem; }
+  max-width: 27.4666666667rem; }
+  @media screen and (min-width: 45em) {
+    .modal__content {
+      width: 27.4666666667rem; } }
+
+.modal__buttons {
+  margin: 1.3333333333rem -1.3333333333rem 0;
+  padding: 1.3333333333rem 1.3333333333rem 0; }
 
 /**
  * Margin and padding helper classes. Use these to tweak layout on a micro
@@ -805,6 +836,32 @@ button.btn {
  *
  * `.u-(m|p)(t|r|b|l|h|v)(-|+|0) {}` = utility - margin/padding top/right/bottom/left/horizontal/vertical less/more/none
  */
+/**
+     * Remove margins.
+     */
+.u-m0 {
+  margin: 0 !important; }
+
+.u-mt0 {
+  margin-top: 0 !important; }
+
+.u-mr0 {
+  margin-right: 0 !important; }
+
+.u-mb0 {
+  margin-bottom: 0 !important; }
+
+.u-ml0 {
+  margin-left: 0 !important; }
+
+.u-mh0 {
+  margin-right: 0 !important;
+  margin-left: 0 !important; }
+
+.u-mv0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important; }
+
 /**
      * Add large paddings.
      */
