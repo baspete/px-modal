@@ -28,10 +28,12 @@ Element providing means to open and close overlay modal with methods to capture 
     <button on-click="modalButtonClicked" class="modal-toggle btn btn--primary" name="{{modalId}}">{{btnModalToggle}}</button>
     <div class="modal flex flex--middle flex--center full-height u-1/1" id="{{modalId}}" role="dialog" aria-labelledby$="{{modalIdTitle(modalId)}}">
       <section class="modal__content u-p+" role=region>
-        <h3 id="{{modalIdTitle(modalId)}}">{{modalHeading}}</h3>
+        <h3 id="{{modalIdTitle(modalId)}}" class="u-mt0 epsilon weight--normal">{{modalHeading}}</h3>
         <content></content>
-        <button on-click="modalActionButtonClicked" class="modal-toggle btn btn--primary" name="{{modalId}}">{{btnModalPositive}}</button>
-        <button on-click="modalActionButtonClicked" class="modal-toggle btn" name="{{modalId}}">{{btnModalNegative}}</button>
+        <div class="modal__buttons flex flex--right">
+          <button on-click="modalActionButtonClicked" class="modal-toggle btn btn--primary">{{btnModalPositive}}</button>
+          <button on-click="modalActionButtonClicked" class="modal-toggle btn">{{btnModalNegative}}</button>
+        </div>
       </section>
     </div>
   </template>
