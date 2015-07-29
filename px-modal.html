@@ -30,8 +30,8 @@ Element providing means to open and close overlay modal with methods to capture 
       <section class="modal__content u-p+" role=region>
         <h3 id="{{modalIdTitle(modalId)}}">{{modalHeading}}</h3>
         <content></content>
-        <button on-click="modalActionButtonClicked" class="modal-toggle btn btn--primary" name="{{modalId}}">{{btnModalPositive}}</button>
-        <button on-click="modalActionButtonClicked" class="modal-toggle btn" name="{{modalId}}">{{btnModalNegative}}</button>
+        <button on-click="modalActionButtonClicked" class="modal-toggle btn btn--primary" id="{{btnModalPositive}}">{{btnModalPositive}}</button>
+        <button on-click="modalActionButtonClicked" class="modal-toggle btn" id="{{btnModalNegative}}">{{btnModalNegative}}</button>
       </section>
     </div>
   </template>
@@ -101,7 +101,7 @@ Element providing means to open and close overlay modal with methods to capture 
     },
 
     modalActionButtonClicked: function(evt){
-        this.fire('modalButtonClicked');
+        this.fire(evt.target.id);
         this.modalButtonClicked(evt);
     },
 
