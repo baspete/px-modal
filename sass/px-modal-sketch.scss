@@ -28,9 +28,10 @@ Predix branding rules go in px-modal-predix.scss, not in this file.
 // Base
 @import "px-flexbox-design/_base.flexbox.scss";
 @import "px-typography-design/_base.typography.scss";
+@import "px-headings-design/_base.headings.scss";
 
 // Objects
-$inuit-enable-btn--primary:   true;
+$inuit-enable-btn--primary      : true;
 
 @import "px-buttons-design/_objects.buttons.scss";
 
@@ -44,11 +45,20 @@ $inuit-enable-btn--primary:   true;
 }
 
 .modal__content {
-  max-width: calculateRem(500px);
+  max-width: calculateRem(412px);
+  @include media-query(lap-and-up) {
+    width: calculateRem(412px);
+  }
+}
+
+.modal__buttons {
+  margin: $inuit-base-spacing-unit--large -#{$inuit-base-spacing-unit--large} 0;
+  padding: $inuit-base-spacing-unit--large $inuit-base-spacing-unit--large 0;
 }
 
 // Trumps
-$inuit-enable-paddings--large: true;
+$inuit-enable-margins--none     : true;
+$inuit-enable-paddings--large   : true;
 
 @import "px-spacing-design/_trumps.spacing.scss";
 @import "px-widths-design/_trumps.widths.scss";
