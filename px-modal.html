@@ -31,8 +31,8 @@ Element providing means to open and close overlay modal with methods to capture 
         <h3 id="{{modalIdTitle(modalId)}}" class="u-mt0 epsilon weight--normal">{{modalHeading}}</h3>
         <content></content>
         <div class="modal__buttons flex flex--right">
-          <button on-click="modalActionButtonClicked" class="modal-toggle btn btn--primary">{{btnModalPositive}}</button>
-          <button on-click="modalActionButtonClicked" class="modal-toggle btn">{{btnModalNegative}}</button>
+          <button on-click="modalActionButtonClicked" id="{{btnModalPositive}}" class="modal-toggle btn btn--primary">{{btnModalPositive}}</button>
+          <button on-click="modalActionButtonClicked" id="{{btnModalNegative}}" class="modal-toggle btn">{{btnModalNegative}}</button>
         </div>
       </section>
     </div>
