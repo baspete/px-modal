@@ -31,8 +31,13 @@ Element providing means to open and close overlay modal with methods to capture 
         <h3 id="{{modalIdTitle(modalId)}}" class="u-mt0 epsilon weight--normal">{{modalHeading}}</h3>
         <content></content>
         <div class="modal__buttons flex flex--right">
-          <button on-click="modalActionButtonClicked" id="{{btnModalPositive}}" class="modal-toggle btn btn--primary">{{btnModalPositive}}</button>
-          <button on-click="modalActionButtonClicked" id="{{btnModalNegative}}" class="modal-toggle btn">{{btnModalNegative}}</button>
+          <div>
+            <template class="modal-toggle" is="dom-if" if="{{btnModalPositive}}">
+              <button on-click="modalActionButtonClicked" id="{{btnModalPositive}}" class="btn btn--primary">{{btnModalPositive}}</button>
+            </template>
+            <template class="modal-toggle" is="dom-if" if="{{btnModalNegative}}">
+              <button on-click="modalActionButtonClicked" id="{{btnModalNegative}}" class="btn">{{btnModalNegative}}</button>
+            </template>
         </div>
       </section>
     </div>
@@ -94,6 +99,28 @@ Element providing means to open and close overlay modal with methods to capture 
 
       btnModalNegative: {
         type: String
+      },
+
+      /**
+       * Name of the event that will be raised when the positive modal button is clicked.
+       *
+       * @type {String}
+       */
+
+      btnModalPositiveClickedEventName: {
+        type: String,
+        value: "btnModalPositiveClicked"
+      },
+
+      /**
+       * Name of the event that will be raised when the negative modal button is clicked.
+       *
+       * @type {String}
+       */
+
+      btnModalNegativeClickedEventName: {
+        type: String,
+        value: "btnModalNegativeClicked"
       }
 
     },
@@ -103,7 +130,12 @@ Element providing means to open and close overlay modal with methods to capture 
     },
 
     modalActionButtonClicked: function(evt){
-        this.fire(evt.target.id);
+        if (evt.target.id === this.btnModalPositive){
+          this.fire(this.btnModalPositiveClickedEventName);
+        }
+        else{
+          this.fire(this.btnModalNegativeClickedEventName);
+        }
         this.modalButtonClicked(evt);
     },
 

@@ -40,17 +40,28 @@
           modal-id="my-modal"
           btn-modal-toggle="Open Modal"
           btn-modal-positive="Continue"
+          btn-modal-positive-clicked-event-name="continue-clicked"
           btn-modal-negative="Back"
-          modal-heading="Modal Header"
+          btn-modal-negative-clicked-event-name="back-clicked"
+          modal-heading="Sign-in required"
         >
           <p>Content of modal one window</p>
         </px-modal>
     </body>
     <script>
-      $("px-modal").on('Continue', function(evt){
+      $("px-modal").on('continue-clicked', function(evt){
         console.log(evt);
       });
-      $("px-modal").on('Back', function(evt){
+      $("px-modal").on('back-clicked', function(evt){
+        console.log(evt);
+      });
+
+      // show the default event name handlers - i.e. btn-modal-positive-clicked-event-name
+      // and btn-modal-negative-clicked-event-name haven't been specified as attributes of px-modal.
+      $("px-modal").on('btnModalPositiveClicked', function(evt){
+        console.log(evt);
+      });
+      $("px-modal").on('btnModalNegativeClicked', function(evt){
         console.log(evt);
       });
     </script>
