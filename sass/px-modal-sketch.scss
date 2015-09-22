@@ -45,6 +45,7 @@ $inuit-enable-btn--primary      : true;
 
 .modal__content {
   max-width: calculateRem(412px);
+  border-radius: 3px;
   @include media-query(lap-and-up) {
     width: calculateRem(412px);
   }
