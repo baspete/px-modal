@@ -32,11 +32,11 @@ Element providing means to open and close overlay modal with methods to capture 
         <content></content>
         <div class="modal__buttons flex flex--right">
           <div class=flex>
-            <template class="modal-toggle" is="dom-if" if="{{btnModalPositive}}">
-              <button on-click="modalActionButtonClicked" id="{{btnModalPositive}}" class="btn btn--primary u-mr-">{{btnModalPositive}}</button>
-            </template>
             <template class="modal-toggle" is="dom-if" if="{{btnModalNegative}}">
-              <button on-click="modalActionButtonClicked" id="{{btnModalNegative}}" class="btn">{{btnModalNegative}}</button>
+              <button on-click="modalActionButtonClicked" id="{{btnModalNegative}}" class="btn u-mr-">{{btnModalNegative}}</button>
+            </template>
+            <template class="modal-toggle" is="dom-if" if="{{btnModalPositive}}">
+              <button on-click="modalActionButtonClicked" id="{{btnModalPositive}}" class="btn btn--primary">{{btnModalPositive}}</button>
             </template>
         </div>
       </section>
