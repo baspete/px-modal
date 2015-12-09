@@ -25,7 +25,9 @@ Element providing means to open and close overlay modal with methods to capture 
 <dom-module id="px-modal">
   <link rel="import" type="css" href="css/px-modal.css"/>
   <template>
-    <button on-click="modalButtonClicked" class="modal-toggle btn btn--primary" name="{{modalId}}">{{btnModalToggle}}</button>
+    <div on-tap="modalButtonClicked">
+      <content select=".modal-trigger"></content>
+    </div>
     <div class="modal flex flex--middle flex--center full-height u-1/1" id="{{modalId}}" role="dialog" aria-labelledby$="{{modalIdTitle(modalId)}}">
       <section class="modal__content u-p+" role=region>
         <h3 id="{{modalIdTitle(modalId)}}" class="u-mt0 epsilon weight--normal">{{modalHeading}}</h3>
@@ -68,7 +70,8 @@ Element providing means to open and close overlay modal with methods to capture 
        */
 
       modalId: {
-        type: String
+        type: String,
+        value: 'myModal'
       },
 
       /**
@@ -141,7 +144,7 @@ Element providing means to open and close overlay modal with methods to capture 
 
     modalButtonClicked: function(evt){
       var modalEle = this.$$("#" + this.modalId);
-      modalEle.style.visibility = (modalEle.style.visibility == "visible") ? "hidden" : "visible";
+      modalEle.style.visibility = (modalEle.style.visibility === "visible") ? "hidden" : "visible";
     }
   });
 </script>

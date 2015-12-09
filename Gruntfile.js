@@ -22,10 +22,15 @@ module.exports = function (grunt) {
                 }
             },
             dist: {
-                files: {
-                    'css/noprefix/px-modal-sketch.css': 'sass/px-modal-sketch.scss',
-                    'css/noprefix/px-modal.css': 'sass/px-modal-predix.scss'
-                }
+              files: {
+                'css/noprefix/px-modal-sketch.css': 'sass/px-modal-sketch.scss',
+                'css/noprefix/px-modal.css': 'sass/px-modal-predix.scss'
+              }
+            },
+            demo: {
+              files: {
+                'css/noprefix/demo.css': 'sass/demo.scss'
+              }
             }
         },
 

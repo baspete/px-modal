@@ -34,36 +34,10 @@ $inuit-enable-btn--primary      : true;
 
 @import "px-buttons-design/_objects.buttons.scss";
 
-:host {
-  display: inline-block;
-}
-
 // Components
-.modal {
-  position: fixed;
-  visibility: hidden;
-  top: 0;
-  left: 0;
-  z-index: 999;
-}
-
-.modal__content {
-  max-width: calculateRem(412px);
-  border-radius: 3px;
-  @include media-query(lap-and-up) {
-    width: calculateRem(412px);
-  }
-}
-
-.modal__buttons {
-  margin: $inuit-base-spacing-unit--large -#{$inuit-base-spacing-unit--large} 0;
-  padding: $inuit-base-spacing-unit--large $inuit-base-spacing-unit--large 0;
-}
 
 // Trumps
-$inuit-enable-margins--none     : true;
 $inuit-enable-margins--small    : true;
-$inuit-enable-paddings--large   : true;
 
 @import "px-spacing-design/_trumps.spacing.scss";
 @import "px-widths-design/_trumps.widths.scss";

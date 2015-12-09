@@ -9,57 +9,6 @@
  * under which the software has been supplied.
  */
 /*
-THIS FILE SHOULD CONTAIN ONLY RULES SPECIFIC TO PREDIX BRANDING
-common/abstract rules go in px-modal-sketch.scss, not in this file.
-*/
-/*------------------------------------*    #PX-COLORS-DESIGN
-\*------------------------------------*/
-/**
- * Brand Colors
- */
-/**
-     * Primary
-     */
-/**
-     * Light
-     */
-/**
-     * Dark
-     */
-/**
- * Monochromatic (gray10 is darkest, gray1 is lightest)
- */
-/**
- * Buttons
- */
-/**
- * Selection
- */
-/**
- * Alerts
- */
-/**
- * Data Visualization
- */
-/**
-     * Basic
-     */
-/**
-     * Light
-     */
-/**
-     * Dark
-     */
-/*
- * Copyright (c) 2014 GE Global Research. All rights reserved.
- *
- * The copyright to the computer software herein is the property of
- * GE Global Research. The software may be used and/or copied only
- * with the written permission of GE Global Research or in accordance
- * with the terms and conditions stipulated in the agreement/contract
- * under which the software has been supplied.
- */
-/*
 THIS FILE SHOULD CONTAIN ONLY ABSTRACT/'SKETCH' THEME RULES, NOT SPECIFIC TO PREDIX BRANDING
 Predix branding rules go in px-modal-predix.scss, not in this file.
 */
@@ -248,6 +197,44 @@ html {
  * A lot of these classes carry `!important` as you will always want them to win
  * out over other selectors.
  */
+/*------------------------------------*    #PX-COLORS-DESIGN
+\*------------------------------------*/
+/**
+ * Brand Colors
+ */
+/**
+     * Primary
+     */
+/**
+     * Light
+     */
+/**
+     * Dark
+     */
+/**
+ * Monochromatic (gray10 is darkest, gray1 is lightest)
+ */
+/**
+ * Buttons
+ */
+/**
+ * Selection
+ */
+/**
+ * Alerts
+ */
+/**
+ * Data Visualization
+ */
+/**
+     * Basic
+     */
+/**
+     * Light
+     */
+/**
+     * Dark
+     */
 /* Links
    ========================================================================== */
 /**
@@ -673,27 +660,6 @@ button.btn {
     border-color: transparent;
     background-color: #2b5ea2; }
 
-:host {
-  display: inline-block; }
-
-.modal {
-  position: fixed;
-  visibility: hidden;
-  top: 0;
-  left: 0;
-  z-index: 999; }
-
-.modal__content {
-  max-width: 27.4666666667rem;
-  border-radius: 3px; }
-  @media screen and (min-width: 45em) {
-    .modal__content {
-      width: 27.4666666667rem; } }
-
-.modal__buttons {
-  margin: 1.3333333333rem -1.3333333333rem 0;
-  padding: 1.3333333333rem 1.3333333333rem 0; }
-
 /**
  * Margin and padding helper classes. Use these to tweak layout on a micro
  * level.
@@ -725,58 +691,6 @@ button.btn {
 .u-mv- {
   margin-top: 0.6666666667rem !important;
   margin-bottom: 0.6666666667rem !important; }
-
-/**
-     * Remove margins.
-     */
-.u-m0 {
-  margin: 0 !important; }
-
-.u-mt0 {
-  margin-top: 0 !important; }
-
-.u-mr0 {
-  margin-right: 0 !important; }
-
-.u-mb0 {
-  margin-bottom: 0 !important; }
-
-.u-ml0 {
-  margin-left: 0 !important; }
-
-.u-mh0 {
-  margin-right: 0 !important;
-  margin-left: 0 !important; }
-
-.u-mv0 {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important; }
-
-/**
-     * Add large paddings.
-     */
-.u-p\00002b {
-  padding: 1.3333333333rem !important; }
-
-.u-pt\00002b {
-  padding-top: 1.3333333333rem !important; }
-
-.u-pr\00002b {
-  padding-right: 1.3333333333rem !important; }
-
-.u-pb\00002b {
-  padding-bottom: 1.3333333333rem !important; }
-
-.u-pl\00002b {
-  padding-left: 1.3333333333rem !important; }
-
-.u-ph\00002b {
-  padding-right: 1.3333333333rem !important;
-  padding-left: 1.3333333333rem !important; }
-
-.u-pv\00002b {
-  padding-top: 1.3333333333rem !important;
-  padding-bottom: 1.3333333333rem !important; }
 
 /**
  * A series of width helper classes that you can use to size things like grid
@@ -852,12 +766,3 @@ button.btn {
   -webkit-flex: none !important;
       -ms-flex: none !important;
           flex: none !important; }
-
-.modal {
-  background-color: rgba(0, 0, 0, 0.7); }
-
-.modal__content {
-  background-color: white; }
-
-.modal__buttons {
-  border-top: 1px solid #d1d0d8; }

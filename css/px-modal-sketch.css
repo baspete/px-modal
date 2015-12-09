@@ -660,6 +660,9 @@ button.btn {
     border-color: transparent;
     background-color: #2b5ea2; }
 
+:host {
+  display: inline-block; }
+
 .modal {
   position: fixed;
   visibility: hidden;
