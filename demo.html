@@ -15,13 +15,12 @@
         <style is="custom-style">
           html {
             font-size: 0.9375em;
-            background-color: white;
           }
         </style>
     </head>
 
     <body unresolved>
-
+      <div class="u-ml">
         <h3>Demo</h3>
 
         <p>
@@ -38,7 +37,6 @@
         </p>
 
         <px-modal
-          btn-modal-toggle="Open Modal"
           btn-modal-positive="Continue"
           btn-modal-negative="Back"
           modal-heading="Sign-in required">
@@ -51,16 +49,14 @@
             </p>
         </px-modal>
 
-        <br>
-        <br>
-        <br>
-
+        <p>
+            Click on the link to open its modal:
+        </p>
         <px-modal
-          btn-modal-toggle="Open Modal"
           btn-modal-positive="Continue"
           btn-modal-negative="Back"
-          modal-heading="Moo required">
-            <a class="modal-trigger">Open Modal</a>
+          modal-heading="Sign-in required">
+            <a href="javascript:void(0)" class="modal-trigger">Open Modal</a>
             <p>
               <b>Please sign-in to access this part of the application.</b>
             </p>
@@ -69,12 +65,15 @@
             </p>
         </px-modal>
 
+        <p>
+          An input that brings up a modal when input loses focus (onblur event)
+        </p>
+        <input onblur="inputLostFocus()" class="text-input" type="text" placeholder="…">
         <px-modal
           id="three"
-          btn-modal-toggle="Open Modal"
           btn-modal-positive="Continue"
           btn-modal-negative="Back"
-          modal-heading="Moo required">
+          modal-heading="Sign-in required">
             <p>
               <b>Please sign-in to access this part of the application.</b>
             </p>
@@ -83,23 +82,16 @@
             </p>
         </px-modal>
 
-        <br>
-        <br>
-        <br>
+        <p>
+            Click on the link to open its modal, click OK to go to www.ge.com:
+        </p>
 
-        <input onblur="inputLostFocus()" class="text-input" type="text" placeholder="…">
-        <script>
-        function inputLostFocus(evt){
-          Polymer.dom(document).querySelector("#three").modalButtonClicked();
-        }
-        </script>
-
+        <a href="javascript:void(0)" onclick="gotoLink()">Goto GE.com?</a>
         <px-modal
           id="four"
-          btn-modal-toggle="Open Modal"
           btn-modal-positive="Continue"
           btn-modal-negative="Back"
-          modal-heading="Moo required">
+          modal-heading="Sign-in required">
             <p>
               <b>Please sign-in to access this part of the application.</b>
             </p>
@@ -108,20 +100,20 @@
             </p>
         </px-modal>
 
-        <br>
-        <br>
-        <br>
-
-        <a onclick="gotoLink()">Goto GE.com?</a>
         <script>
-        function gotoLink(evt){
-          Polymer.dom(document).querySelector("#four").modalButtonClicked();
-        }
+          function inputLostFocus(evt){
+            Polymer.dom(document).querySelector("#three").modalButtonClicked();
+          }
 
-        document.getElementById('four').addEventListener('btnModalPositiveClicked', function() {
-          window.location.href = 'https://www.ge.com';
-        });
+          function gotoLink(evt){
+            Polymer.dom(document).querySelector("#four").modalButtonClicked();
+          }
 
+          document.getElementById('four').addEventListener('btnModalPositiveClicked', function() {
+            window.location.href = 'https://www.ge.com';
+          });
         </script>
+
+      </div>
     </body>
 </html>

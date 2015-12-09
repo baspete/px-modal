@@ -16,12 +16,12 @@
         <style is="custom-style">
           html {
             font-size: 0.9375em;
-            background-color: white;
           }
         </style>
     </head>
 
     <body unresolved>
+      <div class="u-ml">
 
         <h3>Demo</h3>
 
@@ -35,17 +35,16 @@
         </p>
 
         <p>
-            Click on the button to open its modal:
+            Inspect the console to see events being raised when clicking on the modal positive/negative buttons.
         </p>
 
         <px-modal id="one"
           btn-modal-positive-clicked-event-name="continue-clicked"
           btn-modal-negative-clicked-event-name="back-clicked"
-          btn-modal-toggle="Open Modal"
           btn-modal-positive="Continue"
           btn-modal-negative="Back"
           modal-heading="Sign-in required">
-            <i class="modal-trigger">Open Modal</i>
+            <a href="javascript:void(0)" class="modal-trigger">Open Modal</a>
             <p>
               <b>Please sign-in to access this part of the application.</b>
             </p>
@@ -54,14 +53,12 @@
             </p>
         </px-modal>
 
-        <br>
-        <br>
-        <br>
+        <br/>
+        <br/>
 
         <px-modal id="two"
           btn-modal-positive-clicked-event-name="yes-clicked"
           btn-modal-negative-clicked-event-name="no-clicked"
-          btn-modal-toggle="Open Modal"
           btn-modal-positive="Yes"
           btn-modal-negative="No"
           modal-heading="Sign-in required">
@@ -73,9 +70,11 @@
               culpa qui officia deserunt mollit anim id est laborum.
             </p>
         </px-modal>
+
+        <br/>
+        <br/>
 
         <px-modal id="three"
-          btn-modal-toggle="Open Modal"
           btn-modal-positive="Yes"
           btn-modal-negative="No"
           modal-heading="Sign-in required">
@@ -88,6 +87,7 @@
             </p>
         </px-modal>
 
+      </div>
 
         <script>
           $("#one").on('continue-clicked', function(evt){
