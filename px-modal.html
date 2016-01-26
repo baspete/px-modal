@@ -28,7 +28,7 @@ Element providing means to open and close overlay modal with methods to capture 
     <div on-tap="modalButtonClicked">
       <content select=".modal-trigger"></content>
     </div>
-    <div class="modal flex flex--middle flex--center full-height u-1/1" id="{{modalId}}" role="dialog" aria-labelledby$="{{modalIdTitle(modalId)}}">
+    <div class="modal flex flex--top flex--center full-height u-1/1" id="{{modalId}}" role="dialog" aria-labelledby$="{{modalIdTitle(modalId)}}">
       <section class="modal__content u-p+" role=region>
         <h3 id="{{modalIdTitle(modalId)}}" class="u-mt0 epsilon weight--normal">{{modalHeading}}</h3>
         <content></content>
