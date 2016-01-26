@@ -48,10 +48,11 @@ $inuit-enable-btn--primary      : true;
 }
 
 .modal__content {
-  max-width: calculateRem(412px);
+  max-width: calculateRem(410px);
   border-radius: 3px;
+  margin-top: calculateRem(180px);
   @include media-query(lap-and-up) {
-    width: calculateRem(412px);
+    width: calculateRem(410px);
   }
 }
 
