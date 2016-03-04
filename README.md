@@ -7,27 +7,45 @@ Px-Modal is a Predix Experience ('Px') component that open a modal window and ov
 
 ### Attributes
 
-**modal-id**
+#####modal-id
+
+*Type:* **String** - *Default:* 'myModal'
+
 Modal id string
 
-**modal-heading**
+#####modal-heading
+
+*Type:* **String** - (*Optional*) - *Default:* none
+
 Header Text for the modal window
 
-**btn-modal-positive**
+#####btn-modal-positive
+
+*Type:* **String** - *Default:* none
+
 Text for button with positive action on modal
 
-**btn-modal-negative**
+#####btn-modal-negative
+
+*Type:* **String** - *Default:* none
+
 Text for button with negative action on modal
 
-**btn-modal-positive-clicked-event-name**
+#####btn-modal-positive-clicked-event-name
+
+*Type:* **String** - *Default:* btnModalPositiveClicked
+
 Name of the event that will be raised when the positive modal button is clicked.
 
-**btn-modal-negative-clicked-event-name**
+#####btn-modal-negative-clicked-event-name
+
+*Type:* **String** - *Default:* btnModalNegativeClicked
+
 Name of the event that will be raised when the negative modal button is clicked.
 
 ### Methods
 
-**modalButtonClicked()**
+#####modalButtonClicked()
 Trigger the modal to open in javascript
 
 ### Examples
@@ -71,9 +89,7 @@ An input that brings up a modal when input loses focus (onblur event)
     <p>
       <b>Please sign-in to access this part of the application.</b>
     </p>
-    <p><em>Two</em>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-      culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+    <p><em>Two</em>Lorem ipsum dolor sit amet, </p>
 </px-modal>
 
 <script>
@@ -94,9 +110,7 @@ Click on the link to open its modal, click OK to go to www.ge.com:
     <p>
       <b>Please sign-in to access this part of the application.</b>
     </p>
-    <p><em>Two</em>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-      culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+    <p><em>Two</em>Lorem ipsum dolor sit amet, </p>
 </px-modal>
 
 <script>

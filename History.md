@@ -1,4 +1,8 @@
-v1.0.2
+v1.0.4
+==================
+* Style fixes for readme
+
+v1.0.3
 ==================
 * Added README
 
