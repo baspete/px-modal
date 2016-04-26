@@ -28,6 +28,6 @@ module.exports = {
     }
   },
   suites: [
-    'test/px-modal-test-fixture.html'
+    'test/fixture.html'
   ]
 };
