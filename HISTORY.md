@@ -1,6 +1,10 @@
+v1.0.6
+==================
+* removed documentation from README and put link to gh-pages API
+
 v1.0.5
 ==================
-* Added white-space normal to modal to fix gh issue that it inherits. 
+* Added white-space normal to modal to fix gh issue that it inherits.
 
 v1.0.4
 ==================

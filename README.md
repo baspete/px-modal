@@ -1,52 +1,35 @@
-Px-Modal
------------------------------------------------
+# Px-Modal
 
 ## Overview
 
-Px-Modal is a Predix Experience ('Px') component that open a modal window and overlay over the page.
+Px-Modal is a Predix UI component that opens a modal window and overlays over the page.
 
-### Attributes
 
-#####modal-id
+## Usage
 
-*Type:* **String** - *Default:* 'myModal'
+### Prerequisites
+1. node.js
+2. npm
+3. bower
+4. [webcomponents-lite.js polyfill](https://github.com/webcomponents/webcomponentsjs)
 
-Modal id string
+Node, npm and bower are necessary to install the component and dependencies. webcomponents.js adds support for web components and custom elements to your application.
 
-#####modal-heading
+### Getting Started
 
-*Type:* **String** - (*Optional*) - *Default:* none
+First, install the component via bower on the command line.
 
-Header Text for the modal window
+```
+bower install https://github.com/PredixDev/px-modal.git --save
+```
 
-#####btn-modal-positive
+Second, import the component to your application with the following tag in your head.
 
-*Type:* **String** - *Default:* none
+```
+<link rel="import" href="/bower_components/px-modal/px-modal.html"/>
+```
 
-Text for button with positive action on modal
-
-#####btn-modal-negative
-
-*Type:* **String** - *Default:* none
-
-Text for button with negative action on modal
-
-#####btn-modal-positive-clicked-event-name
-
-*Type:* **String** - *Default:* btnModalPositiveClicked
-
-Name of the event that will be raised when the positive modal button is clicked.
-
-#####btn-modal-negative-clicked-event-name
-
-*Type:* **String** - *Default:* btnModalNegativeClicked
-
-Name of the event that will be raised when the negative modal button is clicked.
-
-### Methods
-
-#####modalButtonClicked()
-Trigger the modal to open in javascript
+Finally, use the component in your application:
 
 ### Examples
 
@@ -124,7 +107,9 @@ Click on the link to open its modal, click OK to go to www.ge.com:
 </script>
 ```
 
+## documentation
 
+Read the full API and view the demo [here](https://predixdev.github.io/px-modal).
 
 ### Local Development
 From the component's directory...
@@ -145,9 +130,13 @@ $ grunt depserve
 
 Starts a local server. Navigate to the root of that server (e.g. http://localhost:8080/) in a browser to open the API documentation page, with link to the "Demo" / working examples.
 
-### Active Development (master branch)
-- <a href="http://pxc-demos.grc-apps.svc.ice.ge.com/bower_components/px-modal/demo.html" target="_blank">Demo</a>
-- <a href="http://pxc-demos.grc-apps.svc.ice.ge.com/bower_components/px-modal/index.html" target="_blank">API Docs</a>
 
-### Known Issues
-- None!
+### GE Coding Style Guide
+[GE JS Developer's Guide](https://github.com/GeneralElectric/javascript)
+
+<br />
+<hr />
+
+## Known Issues
+
+Please use [Github Issues](https://github.com/PredixDev/px-modal/issues) to submit any bugs you might find.
