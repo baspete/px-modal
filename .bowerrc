@@ -1,7 +1,4 @@
 {
-  "proxy": "http://proxy-src.research.ge.com:8080",
-  "https-proxy": "http://proxy-src.research.ge.com:8080",
-  "strict-ssl" : "false",
-  "directory": "bower_components"
+  "directory": "."
 }
 
