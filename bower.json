@@ -1,6 +1,6 @@
 {
   "name": "px-modal",
-  "version": "1.0.4",
+  "version": "1.1.1",
   "main": [
     "px-modal.html"
   ],
@@ -14,9 +14,8 @@
     "test"
   ],
   "dependencies": {
-    "polymer": "~v1.2.3",
-    "px-theme": "https://github.com/PredixDev/px-theme.git#~0.4.0",
-    "px-modal": "1.0.6"
+    "polymer": "~v1.4.0",
+    "px-theme": "https://github.com/PredixDev/px-theme.git#~0.7.0"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#~v1.1.0",
@@ -24,5 +23,10 @@
     "px-starter-kit-design": "https://github.com/PredixDev/px-starter-kit-design.git#~0.4.0",
     "px-headings-design": "https://github.com/PredixDev/px-headings-design.git#~0.2.0",
     "jquery": "~2.1.4"
+  },
+  "resolutions": {
+    "px-theme": "~0.7.0",
+    "polymer": "^1.1.0",
+    "px-modal": "^1.1.1"
   }
 }
