@@ -1,6 +1,6 @@
 {
   "name": "px-modal",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "main": [
     "px-modal.html"
   ],
@@ -23,10 +23,5 @@
     "px-starter-kit-design": "https://github.com/PredixDev/px-starter-kit-design.git#~0.4.0",
     "px-headings-design": "https://github.com/PredixDev/px-headings-design.git#~0.2.0",
     "jquery": "~2.1.4"
-  },
-  "resolutions": {
-    "px-theme": "~0.7.0",
-    "polymer": "^1.1.0",
-    "px-modal": "^1.1.1"
   }
 }
