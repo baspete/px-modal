@@ -1,4 +1,4 @@
-# Px-Modal
+# Px-Modal [![Build Status](https://travis-ci.org/PredixDev/px-modal.svg?branch=master)](https://travis-ci.org/PredixDev/px-modal)
 
 ## Overview
 
