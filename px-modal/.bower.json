@@ -1,6 +1,6 @@
 {
   "name": "px-modal",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "main": [
     "px-modal.html"
   ],
@@ -28,11 +28,11 @@
     "jquery": "~2.1.4"
   },
   "homepage": "https://github.com/PredixDev/px-modal",
-  "_release": "1.2.1",
+  "_release": "1.2.2",
   "_resolution": {
     "type": "version",
-    "tag": "v1.2.1",
-    "commit": "2a1bddc18591e50be410a566a1495cd81690ddf6"
+    "tag": "v1.2.2",
+    "commit": "3eef9638b87aba6febe03179118e9c098f1f17ce"
   },
   "_source": "https://github.com/PredixDev/px-modal.git",
   "_target": "^1.1.1",

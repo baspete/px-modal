@@ -1,5 +1,9 @@
 v1.2.1
 ==================
+* fixed vulcanize for old demo
+
+v1.2.1
+==================
 * added vulcanize to demo gh-pages
 
 v1.2.0
