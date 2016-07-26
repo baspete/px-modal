@@ -1,3 +1,7 @@
+v1.2.1
+==================
+* added vulcanize to demo gh-pages
+
 v1.2.0
 ==================
 * Upgrade to Polymer 1.5.0
