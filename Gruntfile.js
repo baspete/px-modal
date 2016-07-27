@@ -29,7 +29,7 @@ module.exports = function (grunt) {
             },
             demo: {
               files: {
-                'css/noprefix/demo.css': 'sass/demo.scss'
+                'css/noprefix/px-modal-demo.css': 'sass/px-modal-demo.scss'
               }
             }
         },

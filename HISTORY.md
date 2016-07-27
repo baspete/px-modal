@@ -1,3 +1,7 @@
+v1.2.2
+==================
+* added mega demo
+
 v1.2.1
 ==================
 * fixed vulcanize for old demo
