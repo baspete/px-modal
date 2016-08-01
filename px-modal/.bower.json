@@ -1,6 +1,6 @@
 {
   "name": "px-modal",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "main": [
     "px-modal.html"
   ],
@@ -14,7 +14,8 @@
     "test",
     "OSS_Notice.pdf",
     "scripts",
-    ".github"
+    ".github",
+    "px-modal.png"
   ],
   "dependencies": {
     "polymer": "^v1.5.0",
@@ -25,7 +26,7 @@
     "px-forms-design": "#~0.3.15",
     "px-tables-design": "#~0.3.12",
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#~1.2.3",
-    "polymer-font-awesome": "~0.1.5",
+    "px-polymer-font-awesome": "^0.1.8",
     "px-tabs": "~0.4.0",
     "px-api-viewer": "~0.0.3",
     "px-demo-snippet": "~0.1.0",
@@ -37,11 +38,11 @@
     "px-buttons-design": "^0.4.26"
   },
   "homepage": "https://github.com/PredixDev/px-modal",
-  "_release": "1.2.3",
+  "_release": "1.2.4",
   "_resolution": {
     "type": "version",
-    "tag": "v1.2.3",
-    "commit": "9899de1d5a08304d84f60500620f2435f5a67164"
+    "tag": "v1.2.4",
+    "commit": "1e5d55025a136c668904c24d999057a64548480d"
   },
   "_source": "https://github.com/PredixDev/px-modal.git",
   "_target": "^1.1.1",
