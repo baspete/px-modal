@@ -34,6 +34,6 @@
     "commit": "4befdabbc93da5f704c55497e9132eea4cc59df1"
   },
   "_source": "https://github.com/predixdev/px-demo-snippet.git",
-  "_target": "~0.1.0",
+  "_target": "^0.1.0",
   "_originalSource": "px-demo-snippet"
 }
