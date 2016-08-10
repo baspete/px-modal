@@ -32,116 +32,117 @@
     <div class="hero u-p++ text--shadow">
       <a class="actionable flex flex--right flex--middle" href="https://github.com/PredixDev/px-modal" target="_blank"><iron-icon class="menu__open" icon="fa:fa-github"></iron-icon>View on Github</a>
   		<h1 class="delta">px-modal</h1>
-  		<p>
-        Modals are useful when a user needs to leave the normal application flow to focus on a specific message or workflow.
-        The modal is a somewhat contentious UI element – sometimes there is no way around it, but generally speaking, using modals frequently or stacking modals on modals should be avoided.
-  		</p>
+      <div class="description-text">
+    		<p>
+          Modals are useful when a user needs to leave the normal application flow to focus on a specific message or workflow.
+          The modal is a somewhat contentious UI element – sometimes there is no way around it, but generally speaking, using modals frequently or stacking modals on modals should be avoided.
+    		</p>
+      </div>
   		<div class="flex">
   			<img class="u-mr--" src="https://img.shields.io/travis/PredixDev/px-modal.svg?style=flat-square" alt="Travis"/>
   			<img class="u-mr--" src="https://img.shields.io/bower/v/px-modal.svg?style=flat-square" alt="Bower"/>
   			<img class="u-mr--" src="https://img.shields.io/github/issues-raw/PredixDev/px-modal.svg?style=flat-square" alt="Issues"/>
   		</div>
   	</div>
-    <br />
 
     <!-- mega demo -->
     <div style="position: relative;" class="u-pb++ flex flex--col" id="defaultTab">
       <div class="tabContainer u-pt++ u-pl++">
         <px-tab-set selected="{{selected}}" bare no-bottom-border>
           <template is="dom-repeat" items="{{optionsArray}}">
-            <px-tab>Configuration {{indexPlusOne(index)}}</px-tab>
+            <px-tab>Option {{indexPlusOne(index)}}</px-tab>
           </template>
         </px-tab-set>
       </div>
       <px-tab-pages selected="{{selected}}">
         <template is="dom-repeat" items="{{optionsArray}}">
-          <section class="tab-page flex flex--right flex--wrap">
-            <div class="mega-demo flex u-pb++">
-            <!-- Properties -->
-            <div class="properties u-ph+ u-pb+  u-m++">
-              <p class="epsilon">Properties</p>
-              <div class="u-mb-">Btn Modal Positive: <input class="text-input" type="text" placeholder="{{item.btnModalPositive}}" value="{{item.btnModalPositive::input}}" /></div>
-              <div class="u-mb-">Btn Modal Negative: <input class="text-input" type="text" placeholder="{{item.btnModalNegative}}" value="{{item.btnModalNegative::input}}" /></div>
-              <div class="u-mb-">Modal Heading: <input class="text-input" type="text" placeholder="{{item.modalHeading}}" value="{{item.modalHeading::input}}" /></div>
-            </div>
+          <section class="tab-page">
+            <div class="mega-demo flex flex--wrap u-ph++ u-pb++">
+              <!-- Properties -->
+              <div class="properties u-ph+ u-pb+ u-mt+">
+                <p class="epsilon">Properties</p>
+                <div class="u-mb-">Btn Modal Positive: <input class="text-input" type="text" placeholder="{{item.btnModalPositive}}" value="{{item.btnModalPositive::input}}" /></div>
+                <div class="u-mb-">Btn Modal Negative: <input class="text-input" type="text" placeholder="{{item.btnModalNegative}}" value="{{item.btnModalNegative::input}}" /></div>
+                <div class="u-mb-">Modal Heading: <input class="text-input" type="text" placeholder="{{item.modalHeading}}" value="{{item.modalHeading::input}}" /></div>
+              </div>
 
-            <div class="demoContainer u-mr++">
-              <!-- demo -->
-              <div class="flex flex--col">
-                <div class="flex__item demo u-ph+ u-pb+ u-mt++"><br />
-                  <div style="width: 450px;">
-                    <template is="dom-if" if="{{_isThirdTab(index)}}">
-                      <input id="thirdInput" class="text-input" type="text" value="Take focus off me">
-                    </template>
+              <div class="demoContainer u-mt+">
+                <!-- demo -->
+                <div class="flex flex--col">
+                  <div class="flex__item demo u-p+">
 
-                    <template is="dom-if" if="{{_isFourthTab(index)}}">
-                      <a href="javascript:void(0)" class="gotoGE">Click me to get a modal, and continue to GE.com</a>
-                    </template>
-
-                    <px-modal
-                      btn-modal-positive="[[item.btnModalPositive]]"
-                      btn-modal-negative="[[item.btnModalNegative]]"
-                      modal-heading="[[item.modalHeading]]"
-                      id="modal{{index}}">
-
-                      <template is="dom-if" if="{{_isFirstTab(index)}}">
-                        <button class="btn btn--primary modal-trigger">Open Modal</button>
+                      <template is="dom-if" if="{{_isThirdTab(index)}}">
+                        <input id="thirdInput" class="text-input input--regular" type="text" value="Take focus off me">
                       </template>
 
-                      <template is="dom-if" if="{{_isSecondTab(index)}}">
-                        <a href="javascript:void(0)" class="modal-trigger">Open Modal</a>
+                      <template is="dom-if" if="{{_isFourthTab(index)}}">
+                        <a href="javascript:void(0)" class="gotoGE">Click me to get a modal, and continue to GE.com</a>
                       </template>
 
-                      <p>
-                        <b>Please sign-in to access this part of the application.</b>
-                      </p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.
-                      </p>
-                    </px-modal>
+                      <px-modal
+                        btn-modal-positive="[[item.btnModalPositive]]"
+                        btn-modal-negative="[[item.btnModalNegative]]"
+                        modal-heading="[[item.modalHeading]]"
+                        id="modal{{index}}">
+
+                        <template is="dom-if" if="{{_isFirstTab(index)}}">
+                          <button class="btn btn--primary modal-trigger">Open Modal</button>
+                        </template>
+
+                        <template is="dom-if" if="{{_isSecondTab(index)}}">
+                          <a href="javascript:void(0)" class="modal-trigger">Open Modal</a>
+                        </template>
+
+                        <p>
+                          <b>Please sign-in to access this part of the application.</b>
+                        </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                          culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                      </px-modal>
+
+                  </div>
+                  <div class="flex__item">
+                    <px-demo-snippet
+                      element-properties={{item}}
+                      element-name="px-modal">
+                    </px-demo-snippet>
                   </div>
                 </div>
-                <div class="flex__item">
-                  <px-demo-snippet
-                    element-properties={{item}}
-                    element-name="px-modal">
-                  </px-demo-snippet>
+              </div>
+            </div>
+            <div class="apiContainer">
+              <div class="flex flex--col api u-mt++" >
+                <div>
+                  <px-api-viewer source="px-modal"></px-api-viewer>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="apiContainer">
-            <div class="flex flex--col api u-mt++" >
-              <div>
-                <px-api-viewer source="px-modal"></px-api-viewer>
-              </div>
-            </div>
-          </div>
-        </section>
-      </template>
-    </px-tab-pages>
-  </div>
-  <footer class="footer flex flex--center">
-    <div class="footer__container u-pv++">
-      <div>
-        <a href="https://ge.com/digital" >
-          <img src="monogram-wdmk.png" alt="GE Monogram" class="footer__img">
-        </a>
-      </div>
-      <div class="footer__list">
-        <ul class="list-inline list-inline--delimited">
-          <li>
-            <a href="http://predix.io/legal" class="footer__list--lnk">Legal</a>
-          </li>
-          <li>
-            <a href="mailto:info@predix.io" class="footer__list--lnk">Contact Us</a>
-          </li>
-          <li>Copyright &copy; {{year}} General Electric Company. All rights reserved.</li>
-        </ul>
-      </div>
+          </section>
+        </template>
+      </px-tab-pages>
     </div>
-  </footer>
-</template>
+    <footer class="footer flex flex--center">
+      <div class="footer__container u-pv++">
+        <div>
+          <a href="https://ge.com/digital" >
+            <img src="monogram-wdmk.png" alt="GE Monogram" class="footer__img">
+          </a>
+        </div>
+        <div class="footer__list">
+          <ul class="list-inline list-inline--delimited">
+            <li>
+              <a href="http://predix.io/legal" class="footer__list--lnk">Legal</a>
+            </li>
+            <li>
+              <a href="mailto:info@predix.io" class="footer__list--lnk">Contact Us</a>
+            </li>
+            <li>Copyright &copy; {{year}} General Electric Company. All rights reserved.</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </template>
 <script>
 window.addEventListener('WebComponentsReady', function() {
   var template = document.querySelector('template[is=dom-bind]'),
