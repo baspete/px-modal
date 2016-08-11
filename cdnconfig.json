@@ -1,0 +1,13 @@
+{
+  "files": [
+    "css/px-modal.css",
+    "px-modal.html"
+  ],
+  "strings": [
+   {
+      "file": "/polymer/polymer.html",
+      "package": "polymer",
+      "cdn": "//cdnjs.cloudflare.com/ajax/libs/polymer/${version}/polymer.min.js"
+    }
+  ]
+}
