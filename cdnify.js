@@ -52,7 +52,7 @@ const cdnizer = cdnizerFactory({
 const fonts = {
   ge: {
     path: /(|(\.\.\/|bower_components\/)*)px-typography-design\/type\//g,
-    cdn: '//' + endpoint + '/px/fonts/1.0.0/'
+    cdn: '//' + endpoint + '/predixdev/fonts/1.0.0/'
   },
   fa: {
     path: /(|(\.\.\/|bower_components\/)*)font-awesome\//g,
