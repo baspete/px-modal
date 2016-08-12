@@ -17,8 +17,6 @@
 
 var s3 = require('s3'),
     fs = require('fs-extra'),
-    dir = require('node-dir'),
-    moment = require('moment'),
     argv = require('minimist')(process.argv.slice(2)),
     cdnizerFactory = require('cdnizer'),
     version = argv.v, // flag is '-v'
@@ -29,7 +27,7 @@ var s3 = require('s3'),
 
 // Get the app name from package.json
 // This will determine the path to these assets on the CDN
-const appName = 'px/' + fs.readJsonSync('./package.json').name;
+const appName = 'predixdev/' + fs.readJsonSync('./package.json').name;
 
 // Get the config for this component
 const config = fs.readJsonSync('./cdnconfig.json');
@@ -42,6 +40,7 @@ const endpoint = 'dzlpbrbc7yvq0.cloudfront.net',
 // See https://github.com/OverZealous/cdnizer for options here
 const cdnizer = cdnizerFactory({
   defaultCDNBase: '//' + endpoint + '/' + appName,
+  allowMin: false,
   files: config.strings
 });
 
@@ -110,7 +109,6 @@ const params = {
     Bucket: bucket,
     Prefix: appName + '/' + version + '/',
     'CacheControl': 'max-age=31536000, no-transform, public', // 1y
-    Expires: moment().add(1,'y').toISOString() // 1y
     // other options supported by putObject, except Body and ContentLength.
     // See: http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#putObject-property
   }

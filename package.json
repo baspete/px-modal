@@ -23,8 +23,6 @@
     "grunt-sass": "^v1.0.0",
     "grunt-shell": "~v1.1.1",
     "minimist": "^1.2.0",
-    "moment": "^2.14.1",
-    "node-dir": "^0.1.15",
     "node-sass-import-once": "^1.2.0",
     "s3": "^4.4.0",
     "webdriver-support": "git+https://github.com/PredixDev/webdriver-support.git#v2.2.1"

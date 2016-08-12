@@ -7,7 +7,7 @@
    {
       "file": "/polymer/polymer.html",
       "package": "polymer",
-      "cdn": "//cdnjs.cloudflare.com/ajax/libs/polymer/${version}/polymer.min.js"
+      "cdn": "//polygit.org/polymer+:${version}/components/polymer/polymer.html"
     }
   ]
 }
