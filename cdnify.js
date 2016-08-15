@@ -32,8 +32,8 @@ var options = {
   version: version,
   dryrun: dryrun,
   // Where do we read files from?
-  root: './dist/public/',
-  // Which files in 'root' do we want to upload to the CDN?
+  root: './',
+  // Which files in there do we want to upload to the CDN?
   files: [
     'css/px-modal.css',
     'px-modal.html'
