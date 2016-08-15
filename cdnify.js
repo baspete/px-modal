@@ -21,21 +21,19 @@ var argv = require('minimist')(process.argv.slice(2)), // get options passed to 
 // #######################################################
 // CONFIGURATION
 
-let appName = fs.readJsonSync('./package.json').name,
-    version = argv.v,
-    dryrun = argv.d;
+    // Get the app name from package.json. This must be unique!
+var appName = fs.readJsonSync('./package.json').name,
+    version = argv.v, // -v
+    dryrun = argv.d;  // -d
 
-const options = {
-  // Get the app name from package.json. This must be unique!
+var options = {
   name: 'predixdev/' + appName,
   // Options passed when calling this program
   version: version,
   dryrun: dryrun,
   // Where do we read files from?
   root: './dist/public/',
-  // Where do we write files to?
-  dest: './cdn/',
-  // Which files do we want to upload to the CDN?
+  // Which files in 'root' do we want to upload to the CDN?
   files: [
     'css/px-modal.css',
     'px-modal.html'
